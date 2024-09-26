@@ -21,6 +21,7 @@ import java.util.Optional;
 @RequestMapping("/auth")
 @RequiredArgsConstructor
 public class AuthController {
+
     private final UserRepository repository;
     private final PasswordEncoder passwordEncoder;
     private final TokenService tokenService;
@@ -33,11 +34,13 @@ public class AuthController {
             return ResponseEntity.ok(new ResponseDTO(user.getName(), token));
         }
         return ResponseEntity.badRequest().build();
+
     }
 
 
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody RegisterRequestDTO body){
+
         Optional<User> user = this.repository.findByEmail(body.email());
 
         if(user.isEmpty()) {
