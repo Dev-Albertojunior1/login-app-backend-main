@@ -39,7 +39,7 @@ Ensure you have the following installed:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/spring-boot-login-registration-api.git
+   git clone https://github.com/Dev-Albertojunior1/login-app-backend-main.git
    cd spring-boot-login-registration-api
 
 2. **Configure your Database**
@@ -134,8 +134,8 @@ Use tools like **Postman** or **Insomnia** to test the API endpoints. Here’s a
 ```json
 POST /auth/register
 {
-  "name": "John Doe",
-  "email": "johndoe@example.com",
+  "name": "Alberto junior",
+  "email": "aj@example.com",
   "password": "password123"
 }
 ```
